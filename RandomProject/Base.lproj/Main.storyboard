@@ -94,6 +94,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EWw-G1-8QE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2Q-u4-Dl3">
                                 <rect key="frame" x="27" y="658" width="355" height="60"/>
@@ -103,6 +106,9 @@
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JL6-A6-9Sh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -121,6 +127,16 @@
                             <constraint firstItem="Fxm-0T-046" firstAttribute="top" secondItem="1Ye-ko-SKM" secondAttribute="bottom" constant="55" id="vQ9-bM-zP7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginBTN" destination="Fxm-0T-046" id="HA8-qc-ZxS"/>
+                        <outlet property="mobvenImage" destination="HCx-Vm-lOx" id="CY1-Aq-jIv"/>
+                        <outlet property="passwordLBL" destination="8dX-Od-2W3" id="fPr-pZ-4Wv"/>
+                        <outlet property="passwordTF" destination="8L2-oE-QMO" id="BeQ-da-JIO"/>
+                        <outlet property="signUpBTN" destination="n2Q-u4-Dl3" id="CAI-Dd-0cc"/>
+                        <outlet property="userNameLBL" destination="Azj-Nu-AvD" id="LbH-LI-Ykh"/>
+                        <outlet property="userNameTF" destination="gSM-Oq-dam" id="MrM-lA-256"/>
+                        <outlet property="welcomeLBL" destination="34k-nl-iKU" id="NZ8-ig-DEa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
