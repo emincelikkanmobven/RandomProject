@@ -27,6 +27,12 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonClicked(_ sender: Any) {
         print("Login Button Clicked")
         loginBTN.isEnabled = false
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "FirstPageViewController") as! FirstPageViewController
+        vc.modalPresentationStyle = .fullScreen
+
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func signUpButtonClicked(_ sender: Any) {

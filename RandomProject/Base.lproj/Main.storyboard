@@ -142,6 +142,68 @@
             </objects>
             <point key="canvasLocation" x="-146.37681159420291" y="-23.4375"/>
         </scene>
+        <!--First Page View Controller-->
+        <scene sceneID="736-SL-flg">
+            <objects>
+                <viewController storyboardIdentifier="FirstPageViewController" id="3ob-u6-VL0" customClass="FirstPageViewController" customModule="RandomProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oia-8l-O9O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTC-dg-gwM">
+                                <rect key="frame" x="355" y="832" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonClicked:" destination="3ob-u6-VL0" eventType="touchUpInside" id="cBt-be-l3f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="McT-kV-LDC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tew-ct-d2V"/>
+                    <connections>
+                        <outlet property="nextBTN" destination="xTC-dg-gwM" id="GV3-5j-58d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8OA-HU-qMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613.0434782608697" y="-23.4375"/>
+        </scene>
+        <!--Second Page View Controller-->
+        <scene sceneID="Zw9-pR-wuT">
+            <objects>
+                <viewController storyboardIdentifier="SecondPageViewController" id="49f-UL-7fR" customClass="SecondPageViewController" customModule="RandomProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c8k-SF-yHW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C4z-3X-ej3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgx-XE-ndn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2421.739130434783" y="-23.4375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ka4-5I-7U3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aY7-0K-cgl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o2o-bh-UA4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3ob-u6-VL0" kind="relationship" relationship="rootViewController" id="4dt-1W-6od"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEx-Do-GR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702.89855072463774" y="-23.4375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="mobven" width="200" height="200"/>
