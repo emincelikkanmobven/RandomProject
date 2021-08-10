@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
         loginBTN.isEnabled = false
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
-        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "FirstPageViewController") as! FirstPageViewController
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "navigationControllerVC")
         vc.modalPresentationStyle = .fullScreen
 
         self.present(vc, animated: true, completion: nil)

@@ -13,7 +13,8 @@ class FirstPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "First Page"
+        navigationController?.title = "title"
+        navigationItem.title = "Title!"
         // Do any additional setup after loading the view.
     }
     
@@ -25,11 +26,9 @@ class FirstPageViewController: UIViewController {
 //
 //        self.present(vc, animated: true, completion: nil)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SecondPageViewController")
-         
-         navigationController?.pushViewController(vc,
-         animated: true)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "secondPageVC") as! SecondPageViewController
+
+        self.navigationController?.pushViewController(vc, animated: true)
     }
    
 
