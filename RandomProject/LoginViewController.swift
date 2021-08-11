@@ -26,13 +26,22 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonClicked(_ sender: Any) {
         print("Login Button Clicked")
-        loginBTN.isEnabled = false
+        if userNameTF.text == "emincelikkan" && passwordTF.text == "mobven123"{
+            
+        
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
         let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "navigationControllerVC")
         vc.modalPresentationStyle = .fullScreen
 
         self.present(vc, animated: true, completion: nil)
+        }else {
+            let alertController = UIAlertController(title: "Error while login", message: "Please check password and id", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            
+            alertController.addAction(alertAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func signUpButtonClicked(_ sender: Any) {

@@ -54,7 +54,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSM-Oq-dam">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="emincelikkan" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSM-Oq-dam">
                                                 <rect key="frame" x="0.0" y="28.5" width="350" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="WIz-J6-RtC"/>
@@ -73,7 +73,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8L2-oE-QMO">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mobven123" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8L2-oE-QMO">
                                                 <rect key="frame" x="0.0" y="28.5" width="350" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="MoT-vO-Blj"/>
@@ -157,17 +157,67 @@
                                     <action selector="nextButtonClicked:" destination="3ob-u6-VL0" eventType="touchUpInside" id="cBt-be-l3f"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tdk-9v-vRf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="internshipCell" rowHeight="105" id="I27-or-q9j" customClass="InternshipTableViewCell" customModule="RandomProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I27-or-q9j" id="y0j-zO-fgb" customClass="InternshipTableViewCell" customModule="RandomProject" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dayLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbu-mY-RRH">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="infoLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHi-w8-U4w">
+                                                    <rect key="frame" x="20" y="44" width="374" height="50"/>
+                                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="vtm-Cr-hwJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xbu-mY-RRH" firstAttribute="top" secondItem="y0j-zO-fgb" secondAttribute="topMargin" id="5im-KC-LQv"/>
+                                                <constraint firstItem="vHi-w8-U4w" firstAttribute="leading" secondItem="y0j-zO-fgb" secondAttribute="leadingMargin" id="6aT-zg-82g"/>
+                                                <constraint firstItem="vHi-w8-U4w" firstAttribute="bottom" secondItem="y0j-zO-fgb" secondAttribute="bottomMargin" id="Hbn-gP-IDG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xbu-mY-RRH" secondAttribute="trailing" id="Xfg-lB-Gjv"/>
+                                                <constraint firstItem="vHi-w8-U4w" firstAttribute="top" secondItem="xbu-mY-RRH" secondAttribute="bottom" constant="11" id="bGD-oQ-do5"/>
+                                                <constraint firstItem="vHi-w8-U4w" firstAttribute="trailing" secondItem="y0j-zO-fgb" secondAttribute="trailingMargin" id="g7R-rR-OJz"/>
+                                                <constraint firstItem="xbu-mY-RRH" firstAttribute="leading" secondItem="y0j-zO-fgb" secondAttribute="leadingMargin" id="xn2-Yu-McZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="xbu-mY-RRH" id="Jm8-He-fkC"/>
+                                            <outlet property="infoLabel" destination="vHi-w8-U4w" id="cm6-3p-L3n"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="McT-kV-LDC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="McT-kV-LDC" firstAttribute="bottom" secondItem="tdk-9v-vRf" secondAttribute="bottom" id="0QH-EK-zne"/>
+                            <constraint firstItem="McT-kV-LDC" firstAttribute="trailing" secondItem="tdk-9v-vRf" secondAttribute="trailing" id="5mt-tr-yAo"/>
                             <constraint firstItem="xTC-dg-gwM" firstAttribute="bottom" secondItem="McT-kV-LDC" secondAttribute="bottom" id="LDm-D6-Dei"/>
                             <constraint firstItem="McT-kV-LDC" firstAttribute="trailing" secondItem="xTC-dg-gwM" secondAttribute="trailing" constant="27" id="PMc-ya-Wcx"/>
+                            <constraint firstItem="tdk-9v-vRf" firstAttribute="top" secondItem="McT-kV-LDC" secondAttribute="top" id="dOV-sm-R0e"/>
                             <constraint firstItem="xTC-dg-gwM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="McT-kV-LDC" secondAttribute="leading" id="l8S-uI-PCM"/>
+                            <constraint firstItem="tdk-9v-vRf" firstAttribute="leading" secondItem="McT-kV-LDC" secondAttribute="leading" id="t48-Jf-n3W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tew-ct-d2V"/>
                     <connections>
+                        <outlet property="internshipTableView" destination="tdk-9v-vRf" id="2h8-m1-KeO"/>
                         <outlet property="nextBTN" destination="xTC-dg-gwM" id="GV3-5j-58d"/>
                     </connections>
                 </viewController>
