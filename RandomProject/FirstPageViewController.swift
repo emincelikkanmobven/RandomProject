@@ -18,9 +18,11 @@ class FirstPageViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell!
     }
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "secondPageVC") as! SecondPageViewController
 
         self.navigationController?.pushViewController(vc, animated: true)
+        vc.selectedRow = indexPath.row 
     }
     
 

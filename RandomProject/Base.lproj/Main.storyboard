@@ -232,10 +232,55 @@
                     <view key="view" contentMode="scaleToFill" id="c8k-SF-yHW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dayLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9r-3x-ZGS">
+                                <rect key="frame" x="140" y="71" width="134" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0kL-Af-wNs">
+                                <rect key="frame" x="20" y="139" width="374" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="irb-Hy-gdZ"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXp-Qm-rml">
+                                <rect key="frame" x="20" y="514" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.082885228097438812" green="0.28010094165802002" blue="0.7624470591545105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="49f-UL-7fR" eventType="touchUpInside" id="jFs-qF-ncQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C4z-3X-ej3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E9r-3x-ZGS" firstAttribute="leading" secondItem="C4z-3X-ej3" secondAttribute="leading" constant="140" id="FyB-6b-hBx"/>
+                            <constraint firstItem="C4z-3X-ej3" firstAttribute="trailing" secondItem="LXp-Qm-rml" secondAttribute="trailing" constant="20" id="RAk-uD-LEg"/>
+                            <constraint firstItem="C4z-3X-ej3" firstAttribute="trailing" secondItem="E9r-3x-ZGS" secondAttribute="trailing" constant="140" id="SNz-bl-Nj1"/>
+                            <constraint firstItem="E9r-3x-ZGS" firstAttribute="top" secondItem="C4z-3X-ej3" secondAttribute="top" constant="27" id="d4f-1n-AfY"/>
+                            <constraint firstItem="C4z-3X-ej3" firstAttribute="trailing" secondItem="0kL-Af-wNs" secondAttribute="trailing" constant="20" id="ebO-sz-siS"/>
+                            <constraint firstItem="0kL-Af-wNs" firstAttribute="top" secondItem="E9r-3x-ZGS" secondAttribute="bottom" constant="27" id="mGQ-Pd-xPC"/>
+                            <constraint firstItem="LXp-Qm-rml" firstAttribute="top" secondItem="0kL-Af-wNs" secondAttribute="bottom" constant="75" id="w8N-Um-0Yg"/>
+                            <constraint firstItem="0kL-Af-wNs" firstAttribute="leading" secondItem="C4z-3X-ej3" secondAttribute="leading" constant="20" id="wqy-Re-UJP"/>
+                            <constraint firstItem="LXp-Qm-rml" firstAttribute="leading" secondItem="C4z-3X-ej3" secondAttribute="leading" constant="20" id="yAl-XY-wfJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7aJ-kw-WUX"/>
+                    <connections>
+                        <outlet property="dayLabel" destination="E9r-3x-ZGS" id="kWQ-Jw-Ota"/>
+                        <outlet property="infoTextView" destination="0kL-Af-wNs" id="c3E-5t-403"/>
+                        <outlet property="saveButton" destination="LXp-Qm-rml" id="L8G-j7-qQM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgx-XE-ndn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,6 +307,9 @@
     </scenes>
     <resources>
         <image name="mobven" width="200" height="200"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
