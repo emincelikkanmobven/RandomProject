@@ -8,6 +8,7 @@
 import UIKit
 
 class FirstPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var logoutButton: UIButton!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 40
     }
@@ -37,7 +38,18 @@ class FirstPageViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func logoutButtonClicked(_ sender: Any) {
+        print("Logout Button Clicked")
+                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController")
+        vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+        UserDefaults.standard.setValue(false, forKey: "isLoggedIn")
+        print(UserDefaults.standard.value(forKey: "isLoggedIn"))
+        
+    }
+    
     @IBAction func nextButtonClicked(_ sender: Any) {
 //        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //

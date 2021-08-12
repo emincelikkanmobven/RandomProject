@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="RandomProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="RandomProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,9 +215,21 @@
                             <constraint firstItem="tdk-9v-vRf" firstAttribute="leading" secondItem="McT-kV-LDC" secondAttribute="leading" id="t48-Jf-n3W"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tew-ct-d2V"/>
+                    <navigationItem key="navigationItem" id="Tew-ct-d2V">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Tfn-aT-j8X">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Efn-KH-o79">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutButtonClicked:" destination="3ob-u6-VL0" eventType="touchUpInside" id="QMG-pW-XB3"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="internshipTableView" destination="tdk-9v-vRf" id="2h8-m1-KeO"/>
+                        <outlet property="logoutButton" destination="Efn-KH-o79" id="top-5c-52L"/>
                         <outlet property="nextBTN" destination="xTC-dg-gwM" id="GV3-5j-58d"/>
                     </connections>
                 </viewController>

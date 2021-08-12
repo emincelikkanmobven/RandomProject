@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonClicked(_ sender: Any) {
         print("Login Button Clicked")
+        
         if userNameTF.text == "emincelikkan" && passwordTF.text == "mobven123"{
             
         
@@ -35,6 +36,8 @@ class LoginViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
 
         self.present(vc, animated: true, completion: nil)
+            UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
+            print(UserDefaults.standard.value(forKey: "isLoggedIn"))
         }else {
             let alertController = UIAlertController(title: "Error while login", message: "Please check password and id", preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
@@ -49,5 +52,18 @@ class LoginViewController: UIViewController {
 
     }
     
-
+//    override func viewWillAppear(_ animated: Bool) {
+//        if (UserDefaults.standard.value(forKey: "isLoggedIn") != nil) == true{
+//
+//            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//            let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "navigationControllerVC")
+//            vc.modalPresentationStyle = .fullScreen
+//
+//            self.present(vc, animated: true, completion: nil)
+//        }
+//        else{
+//            print("Login Page shown")
+//        }
+//    }
 }
